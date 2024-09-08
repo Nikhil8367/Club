@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official webpage of GVP Data Science Club. Learn about our events, meet the team, and get in touch with us.">
+    <title>GVP Data Science Club - Official Webpage</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth; /* Smooth scroll for navigation */
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            border-radius: 25px;
+            margin: 20px auto;
+            max-width: 90%;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #2980b9;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: rgb(144, 101, 172);
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .container img {
+            border-radius: 15px;
+            width: 80%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        table a {
+            color: white;
+            background-color: #3498db;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        table a:hover {
+            background-color: #2980b9;
+        }
+
+        .titleimg img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 1em;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container img {
+                width: 100%;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+
+            .titleimg img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            table, th, td {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titleimg">
+        <img src="gvp title.jpg" alt="GVP Data Science Club">
+    </div>
+    <br>
+    <div class="container">
+        <img src="1.png" alt="GVP Data Science Club">
+    </div>
+
+    <header>
+        <h1>Welcome to GVP Data Science Club</h1>
+        <p>Official Club of GVP</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#events">Upcoming Events</a>
+        <a href="#team">Meet the Team</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p><b>We are a passionate group of students dedicated to [the club’s focus]. Our mission is to create a collaborative environment where members can learn, grow, and share knowledge. Whether you’re a beginner or an expert, we have something for everyone!</b></p>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Description/Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Workshop on AI</td>
+                    <td>Sept 15, 2024</td>
+                    <td><a href="#">Register Here</a></td>
+                </tr>
+                <tr>
+                    <td>Guest Speaker Series</td>
+                    <td>Oct 10, 2024</td>
+                    <td><a href="#">Learn More</a></td>
+                </tr>
+                <tr>
+                    <td>Annual Hackathon</td>
+                    <td>Nov 20, 2024</td>
+                    <td><a href="#">Join Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>LinkedIn/Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name1</td>
+                    <td>President</td>
+                    <td><a href="#">LinkedIn</a></td>
+                </tr>
+                <tr>
+                    <td>Name2</td>
+                    <td>Vice President</td>
+                    <td><a href="#">LinkedIn</a></td>
+                </tr>
+                <tr>
+                    <td>Name3</td>
+                    <td>Events Manager</td>
+                    <td><a href="#">LinkedIn</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="contact">
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions or want to join us? Reach out to us at:</p>
+            <p>Email: <a href="mailto:club@college.edu">club@college.edu</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GVP Data Science Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+
+</body>
+
+</html>
