@@ -145,55 +145,95 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Media Queries for Mobile Devices */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-                font-size: 1em;
-            }
+/* General Section Styling */
+section {
+    margin: 20px 0; /* Space between sections */
+    padding: 20px;  /* Padding inside sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns content horizontally */
+}
 
-            header h1 {
-                font-size: 2em;
-            }
+/* Section Titles */
+section h2 {
+    font-size: 1.8em;
+    color: #3498db;
+    text-align: center;
+    margin: 0; /* Remove default margin for titles */
+}
 
-            .container img {
-                width: 25%;
-            }
+/* Ensure content is below the title */
+section p, table {
+    margin-top: 10px; /* Space between title and content */
+}
 
-            table, th, td {
-                font-size: 0.9em;
-            }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    section {
+        margin: 15px 0; /* Adjust margin for medium-sized screens */
+        padding: 15px;  /* Adjust padding for better fit */
+    }
 
-            .titleimg img {
-                width: 100%;
-            }
-        }
+    section h2 {
+        font-size: 1.6em; /* Adjust font size for section titles */
+    }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
+    section p, table {
+        margin-top: 10px; /* Ensure space below the title */
+    }
 
-            nav a {
-                font-size: 0.9em;
-            }
+    .container img {
+        width: 100%; /* Ensure images fit well */
+        margin-bottom: 20px; /* Added space below images */
+    }
 
-            table, th, td {
-                font-size: 0.8em;
-            }
-        }
+    table {
+        font-size: 0.9em; /* Adjusted font size for better readability */
+    }
+
+    th, td {
+        padding: 8px; /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        margin: 10px 0; /* Further reduced margin for small screens */
+        padding: 10px;  /* Further adjusted padding */
+    }
+
+    section h2 {
+        font-size: 1.4em; /* Further adjust font size for small screens */
+    }
+
+    section p, table {
+        margin-top: 10px; /* Ensure consistent spacing */
+    }
+
+    table {
+        font-size: 0.8em; /* Further reduced font size */
+    }
+
+    th, td {
+        padding: 6px; /* Further reduced padding */
+    }
+
+    .container img {
+        width: 100%; /* Ensure images fit well */
+    }
+}
+
     </style>
-</head>
+    </head>
 
-<body>
-    <div class="titleimg">
-        <img src="gvp title.jpg" alt="GVP Data Science Club">
-    </div>
-    <br>
-    <div class="container">
-        <img src="1.png" alt="GVP Data Science Club">
-    </div>
+    <body>
+        <div class="titleimg">
+            <img src="gvp title.jpg" alt="GVP Data Science Club">
+        </div>
+        <br>
+        <div class="container">
+            <img src="1.png" alt="GVP Data Science Club">
+        </div>
 
     <header>
         <h1>Welcome to GVP Data Science Club</h1>
