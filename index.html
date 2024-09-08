@@ -145,47 +145,78 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    .container img {
-        width: 30%; /* Ensure images fit well */
-        margin-bottom: 20px; /* Added space below images */
-    }
-
-    table {
-        font-size: 0.9em; /* Adjusted font size for better readability */
-    }
-
-    th, td {
-        padding: 8px; /* Reduced padding for smaller screens */
-    }
+        /* Overlay Styles */
+        .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure overlay is above other content */
 }
 
-@media (max-width: 480px) {
-    table {
-        font-size: 0.8em; /* Further reduced font size */
-    }
-
-    th, td {
-        padding: 6px; /* Further reduced padding */
-    }
-
-    .container img {
-        width: 30%; /* Ensure images fit well */
-    }
+.overlay img {
+    max-width: 90vw; /* Responsive width */
+    max-height: 90vh; /* Responsive height */
+    border-radius: 15px;
 }
+
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            .container img {
+                width: 100%; /* Ensure images fit well */
+                margin-bottom: 20px; /* Added space below images */
+            }
+
+            table {
+                font-size: 0.9em; /* Adjusted font size for better readability */
+            }
+
+            th, td {
+                padding: 8px; /* Reduced padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                font-size: 0.8em; /* Further reduced font size */
+            }
+
+            th, td {
+                padding: 6px; /* Further reduced padding */
+            }
+
+            .container img {
+                width: 100%; /* Ensure images fit well */
+            }
+        }
+        .tableimg {
+            width: 15px;
+            height: auto;
+            margin-right: 10px;
+        }
 
     </style>
-    </head>
+</head>
 
-    <body>
-        <div class="titleimg">
-            <img src="gvp title.jpg" alt="GVP Data Science Club">
-        </div>
-        <br>
-        <div class="container">
-            <img src="1.png" alt="GVP Data Science Club">
-        </div>
+<body>
+    <!-- Overlay Container -->
+    <div class="overlay" id="image-overlay">
+        <img src="" id="overlay-image" alt="Full Screen Image">
+    </div>
+
+    <div class="titleimg">
+        <img src="gvp title.jpg" alt="GVP Data Science Club">
+    </div>
+    <br>
+    <div class="container">
+        <img src="1.png" alt="GVP Data Science Club">
+    </div>
 
     <header>
         <h1>Welcome to GVP Data Science Club</h1>
@@ -246,17 +277,17 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Name1</td>
+                    <td><img src="nikhil.jpg" class="tableimg">Name1</td>
                     <td>President</td>
                     <td><a href="#">LinkedIn</a></td>
                 </tr>
                 <tr>
-                    <td>Name2</td>
+                    <td><img src="nikhil.jpg" class="tableimg">Name2</td>
                     <td>Vice President</td>
                     <td><a href="#">LinkedIn</a></td>
                 </tr>
                 <tr>
-                    <td>Name3</td>
+                    <td><img src="nikhil.jpg" class="tableimg">Name3</td>
                     <td>Events Manager</td>
                     <td><a href="#">LinkedIn</a></td>
                 </tr>
@@ -277,9 +308,28 @@
     </footer>
 
     <script>
-        window.onload = function() {
-            window.scrollTo(0, 0);
-        };
+        // JavaScript to handle image overlay
+        document.querySelectorAll('table img').forEach(img => {
+            img.addEventListener('mouseover', function() {
+                const overlay = document.getElementById('image-overlay');
+                const overlayImage = document.getElementById('overlay-image');
+                
+                overlayImage.src = this.src; // Set the source of the overlay image to the hovered image
+                overlay.style.display = 'flex'; // Show the overlay
+            });
+        });
+
+        document.getElementById('image-overlay').addEventListener('click', function() {
+            this.style.display = 'none'; // Hide the overlay when clicking anywhere on it
+        });
+
+        // Hide overlay if clicking outside the image
+        document.addEventListener('click', function(event) {
+            const overlay = document.getElementById('image-overlay');
+            if (!overlay.contains(event.target) && !event.target.matches('table img')) {
+                overlay.style.display = 'none';
+            }
+        });
     </script>
 
 </body>
